@@ -1,0 +1,72 @@
+page-salesman {
+    ion-select{
+        max-width: 100%;
+        width: 100%;
+
+    }
+    .logininp{
+        margin-bottom: 10px;
+    }
+    ion-content,.content-ios{
+        background:#000;
+    }
+    .item-block:last-child{
+
+        border: 1px solid #eee;
+        border-radius: 4px;
+
+    }
+    .loginform ion-item{
+        border-radius: 4px;
+    }
+    .lisit .img_lo{
+        margin: 0 auto;
+        display: block; 
+        width: 100%;
+        /*margin-top: 50%;*/
+
+    }
+    .toolbar-title img,.title{
+        display: none;
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+        border: 1px solid #c8c7cc;
+    }
+    .list-ios {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        margin-bottom: 16px;
+
+    }
+
+    button.subhme, button.subhme:active,button.subhme.activated{
+        padding: 17px 35px;
+        margin: 0 auto;
+        display: block;
+        font-size: 20px;
+        color: #fff;
+        background: #414042;
+
+
+    }
+    .item-ios  {
+        font-size: 20px;
+
+    }
+}
+@media (max-device-width:767px) {
+    page-salesman{
+        .item-ios  {
+            font-size: 15px;
+
+        }
+        button.subhme,button.subhme:active,button.subhme.activated {
+            padding: 17px 35px;
+            margin: 0 auto;
+            display: block;
+            font-size: 17px;
+            background: #414042;
+        }
+    }
+}

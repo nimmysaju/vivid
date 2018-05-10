@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        
+        <ion-title>
+        <img src="assets/logo.png" alt=""/></ion-title>
+        
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid no-padding>
+       
+        <ion-row>
+            <h2 class="successfull">Your Order Is<br>
+                Succefully Placed</h2>
+            <span class="thanku">Thank you</span>
+        </ion-row>
+          <ion-row class="flowe">
+         <!--<ion-icon name="bonfire"></ion-icon>-->
+          </ion-row>
+        
+        <ion-row class="order-outer">
+            <button class="order_more " (click)="newOrder()">New Order</button>
+            <button class="order_more " (click)="loadPrint()">Print</button>
+        </ion-row>
+    </ion-grid>
+</ion-content>

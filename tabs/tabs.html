@@ -1,0 +1,9 @@
+<ion-tabs>
+    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Contact Us" tabIcon="ios-call"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="ios-information-circle-outline"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="Logout" (ionSelect)="signOut()" tabIcon="ios-power">
+
+        
+    </ion-tab>
+</ion-tabs>
