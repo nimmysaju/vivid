@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar>
+
+        <ion-title>
+            <img src="assets/logo.png" alt=""/></ion-title>
+        <!--        <div class="item item-input-inset search_top">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="Search..." class="searchinp" >
+                    </label>
+                    <span class="button button-small" ng-click="filterFeed()">
+                    <ion-icon name="search"></ion-icon>
+                    </span>
+                    <span class="button button-small searchsechead" ng-click="filterFeed()">
+                        <ion-icon name="search"></ion-icon>
+                    </span>
+                </div>-->
+        <ion-searchbar class="item item-input-inset search_top" [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+    </ion-navbar>
+</ion-header>
+<div class="proceed_checkout">
+    <button  (click)="addToCart()" color="red" icon-start="" ion-button="" round="" class="disable-hover button button-ios button-default button-default-ios button-round button-round-ios checkoutbtn"><span class="button-inner">
+            <ion-icon is-active="false" name="cart" role="img" class="icon icon-ios ios-cart"  aria-label="cart"></ion-icon>
+            ADD TO CART 
+        </span><div class="button-effect"></div>
+    </button>
+</div>
+<ion-content padding>
+    <ion-list class="home_lis"> 
+        <form class="list">
+            <ion-item class="flwrlist" *ngFor="let p of products">
+                      <!--<ion-grid no-padding>-->
+<!--                    <ion-row>
+                        <ion-col col-6 class="flwrdetails">-->
+  <ion-label class="title_flower">
+                            <h3>{{p.title.rendered}}</h3>
+                </ion-label>
+<!--                        </ion-col>
+                        <ion-col col-4 class="img_wrap">-->
+<ion-label class="price_flower">
+                            <span class="pricetag">AED {{p.acf.selling_price}}</span> 
+                            </ion-label>
+                        <!--</ion-col>-->
+                        <!--<ion-col col-2>--> 
+                            
+                            <!--<ion-item class="input_wrapper">-->
+                                <ion-label class="cart_amt" >
+                            <ion-input type="number" name="qty_name_{{p.id}}" (input)="setCartAmount()" max="{{p.acf.quantity}}" class="qty" [(ngModel)]="p.qty" id="qty_id_{{p.id}}" placeholder="QTY"></ion-input>
+                            </ion-label>  
+                            <!--</ion-item>-->
+                         
+<!--                        </ion-col>
+                    </ion-row>
+                <!--</ion-grid>-->
+            </ion-item>
+                    <!--<ion-list>-->
+<!--  <ion-item class="flwrlist" *ngFor="let p of products">
+    <ion-label color="primary" >{{p.title.rendered}}</ion-label>
+    <ion-input type="number" name="qty_name_{{p.id}}" (input)="setCartAmount()" max="{{p.acf.quantity}}" class="qty" [(ngModel)]="p.qty" id="qty_id_{{p.id}}" placeholder="QTY"></ion-input>
+  </ion-item> -->
+
+
+        </form>
+    </ion-list>
+</ion-content>
+

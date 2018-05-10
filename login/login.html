@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+       
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid no-padding>
+        <ion-row>
+            <div class="profile_pics"><img src="assets/salelogo.png" class="prof_pic"></div>
+            <div class="profile_fields">
+                <form class="list" [formGroup]="loginForm">
+                    <input type="text" [(ngModel)]="reg.username" formControlName="username" class="prof_input" placeholder="Username">
+                    <input type="password"  [(ngModel)]="reg.password" formControlName="password" class="prof_input" placeholder="Password">
+                    <button class="sign_in_btn" (click)="user_login()"> Sign In</button>
+                </form>
+            </div>
+        </ion-row>
+        
+    </ion-grid>
+</ion-content>
+<!--<ion-footer>arersdrsdrds</ion-footer>-->

@@ -1,0 +1,108 @@
+page-login {
+    ion-content,.content-ios{
+        background-color: #000;
+        /*background-size: 100% 100%;*/
+        .profile_pics{
+            text-align: center;
+            width:100%;
+            float:left;
+        }
+        .profile_pics .prof_pic{
+            width: 40%;
+            margin: 0 auto; 
+            margin-top: 33px;
+            display: block;
+            margin-bottom: 60px;
+        }
+        .grid{background-color: #000;} 
+        .profile_fields{
+            text-align: center;
+            width:100%;
+            float:left;
+            .prof_input  {   width: 80%;
+            /*background: transparent;*/
+            border: 1px solid #fff;
+            margin-bottom: 10px;
+            padding: 6px 15px;
+            color: #000;
+            border-radius: 4px;
+            height: 32px;
+ 
+        }
+        .sign_in_btn{
+            clear: left;
+            width: 34%;
+            padding: 10px 15px;
+            margin-top: 16px;
+            border-radius: 8px;
+            background: #414042;
+            color: #fff;
+            font-size: 15px;
+            box-shadow: 0px 1px 7px #443131;
+        }
+    }
+    .forgot_signin{
+        text-align:center;
+        margin-top: 10px;
+        .line_strgt{
+            width: 70%;
+            height: 1px;
+            background: #fff;
+            margin: 0 auto;
+        }
+        .forgot_pwd {
+            width: 100%;
+            float: left;
+            margin: 18px 0px;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .sign_in_btn{
+            clear: left;
+            width: 34%;
+            padding: 10px 15px;
+            margin-top: 16px;
+            border-radius: 8px;
+            background:  #414042;
+            color: #fff;
+            font-size: 15px;
+            margin: 0 auto;
+            box-shadow: 0px 1px 7px #443131;
+        }
+    }
+}
+}
+@media (min-device-width:767px) {
+    page-login {
+    ion-content  .profile_fields .prof_input {
+    width: 80%;
+    background: #fff;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 6px 15px;
+    color: #000;
+    border-radius: 4px;
+    height: 55px;
+    font-size: 19px;
+}
+ion-content  .profile_fields .sign_in_btn,ion-content .forgot_signin .sign_in_btn  {
+    clear: left;
+    width: 34%;
+    padding: 17px 16px;
+    margin-top: 16px;
+    border-radius: 8px;
+    background: #414042;
+    color: #fff;
+    font-size: 27px;
+    box-shadow: 0px 1px 7px #443131;
+}
+ion-content .forgot_signin .forgot_pwd {
+    font-size: 23px;
+}
+ion-content .profile_pics .prof_pic {
+    margin-top: 55px;
+}
+    }
+
+}
