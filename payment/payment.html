@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar>
+
+        <ion-title>
+            <img src="assets/logo.png" alt=""/></ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form class="list" [formGroup]="cartForm">
+        <ion-list class="listitems">
+            <ion-list radio-group class="outerlis"  formControlName="payment_method" [(ngModel)]="user.payment_method">
+                <ion-list-header>
+                    Choose Your Payment Method
+                </ion-list-header>
+
+                <ion-item>
+                    <ion-label>Cash On Delivery</ion-label>
+                    <ion-radio name="payment_method"  value="Cash"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Card Payment</ion-label>
+                    <ion-radio value="Card" name="payment_method" ></ion-radio>
+                </ion-item>
+
+            </ion-list>
+            <ion-list class="sublists">
+                <ion-list-header>
+                    ADD 
+
+
+
+
+
+
+                </ion-list-header>
+
+                <!--<ion-item style="">-->
+                    <ion-input type="hidden" name="inv_number" formControlName="invoicenum"  placeholder="Invoice Number" [(ngModel)]="user.invoicenum" value="{{this.dateStr}}"></ion-input>
+                <!--</ion-item>-->
+
+                <ion-item>
+                    <ion-input type="tel" placeholder="Phone Number"  formControlName="remarks" name="remark" [(ngModel)]="user.remarks"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="text" placeholder="Name" formControlName="name"  name="custname" [(ngModel)]="user.name"></ion-input>
+                </ion-item>
+                <ion-item class="txtareasec">
+                    <ion-textarea placeholder="Address" formControlName="address" name="custaddress"  [(ngModel)]="user.address"></ion-textarea>
+                </ion-item>
+                <ion-item class="txtareasec">
+                    <ion-textarea placeholder="Description" formControlName="description" name="custdescription"  [(ngModel)]="user.description"></ion-textarea>
+                </ion-item>
+            </ion-list>
+
+        </ion-list>
+    </form>
+    <div class="payment_btn">
+        <button ion-button color="danger" (click)="submitPurchase()">SAVE</button>
+    </div>
+
+</ion-content>
+
